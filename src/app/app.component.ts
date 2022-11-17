@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'diretivas';
+
+  noClique(novoValor:number){
+    console.log('Atualizou o contador ', novoValor);
+  }
 }

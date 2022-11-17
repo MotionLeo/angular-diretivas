@@ -11,6 +11,7 @@ import { TabelaComponent } from './tabela/tabela.component';
 import { HomeComponent } from './home/home.component';
 import { FormatarCpfPipe } from './pipes/formatar-cpf.pipe';
 import { FormatarTelefonePipe } from './pipes/formatar-telefone.pipe';
+import { ContadorComponent } from './contador/contador.component';
 
 registerLocaleData(ptBr);
 
@@ -22,7 +23,8 @@ registerLocaleData(ptBr);
     TabelaComponent,
     HomeComponent,
     FormatarCpfPipe,
-    FormatarTelefonePipe
+    FormatarTelefonePipe,
+    ContadorComponent
   ],
   imports: [
     BrowserModule,

@@ -104,6 +104,11 @@
             <i class="fas fa-fw fa-table"></i>
             <span>Tabelas</span></a>
     </li>
+    <li class="nav-item">
+        <a class="nav-link" routerLink="/contador">
+            <i class="fas fa-fw fa-table"></i>
+            <span>Contador de número</span></a>
+    </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">
@@ -118,5 +123,9 @@
     <app-topbar></app-topbar>
 
     <router-outlet></router-outlet>
+    <app-contador
+        [contadorNumerico] = "10"
+        (contadorMudou) = "noClique($event)"
+    ></app-contador>
   </div>  
 </div>
