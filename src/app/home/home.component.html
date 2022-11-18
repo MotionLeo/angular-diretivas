@@ -1,3 +1,15 @@
 <div class="container-fluid">
     <p>Página Inicial!</p>
+    <ul>
+        <li *ngFor="let memesAgrupados of MEMES">
+            <h2>{{memesAgrupados.categoria}}</h2>
+            <div *ngFor="let meme of memesAgrupados.memes; let par = even">
+                <img [src]= "PREFIXO_IMAGEM_URL + meme.imagemURL" *ngIf="par; else blocoPar">
+                <ng-template #blocoPar>
+                    <h2>PAR</h2>
+                </ng-template>
+            </div>
+        </li>
+
+    </ul>
 </div>

@@ -124,8 +124,7 @@
 
     <router-outlet></router-outlet>
     <app-contador
-        [contadorNumerico] = "10"
-        (contadorMudou) = "noClique($event)"
+        [(contadorNumerico)] = "valorContador"
     ></app-contador>
   </div>  
 </div>
