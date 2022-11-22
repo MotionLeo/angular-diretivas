@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <form id="contactForm">
+        <h2 class="text-center text-secondary mb-0">{{titulo}}</h2>
+        <!-- Input de nome-->
+        <div class="form-floating mb-3">
+            <label for="nome">Nome</label>
+            <input class="form-control" id="nome" name="nome" type="text" [(ngModel)]="estoque.nome" placeholder="Digite o nome do item">
+        </div>
+        <!-- Input de descrição -->
+        <div class="form-floating mb-3">
+            <label for="descricao">Descrição</label>
+            <input class="form-control" id="descricao" name="descricao" type="text" [(ngModel)]="estoque.descricao" placeholder="Digite a descrição do item">
+        </div>
+        <!-- Input de preço -->
+        <div class="form-floating mb-3">
+            <label for="preco">Preço</label>
+            <input class="form-control" id="preco" name="preco" type="text" [(ngModel)]="estoque.preco" placeholder="Digite o preço do item">
+        </div>
+
+        <button class="btn btn-primary btn-xl" id="submitButton" type="button" (click)="cadastroNoEstoque()">{{textoDoBotao}}</button>
+    </form>
+</div>

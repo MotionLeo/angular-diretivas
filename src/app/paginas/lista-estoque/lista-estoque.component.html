@@ -1,0 +1,40 @@
+<!--Tabela de leitura dos dados-->
+<section>
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <button class="btn btn-primary btn-xl" (click)="novoItem()">Adicionar novo</button>
+        </div>
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Tabela do Estoque</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <div *ngIf="estoqueDeItens.length == 0">
+                    Estoque vazio
+                </div>
+                <table *ngIf="estoqueDeItens.length > 0" class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Preço</th>
+                            <th>Alterar tem</th>
+                            <th>Excluir item</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let estoque of estoqueDeItens">
+                            <td>{{estoque.id}}</td>
+                            <td>{{estoque.nome}}</td>
+                            <td>{{estoque.descricao}}</td>
+                            <td>{{estoque.preco.toString() | currency}}</td>
+                           <!-- <td><button class="btn btn-primary btn-xl" id="submitButton" type="button" (click)="alteraNoEstoque(estoque.id)">Alterar</button></td> -->
+                           <!-- <td><button class="btn btn-secondary btn-xl" id="submitButton" type="button" (click)="excluiNoEstoque(estoque.id)">Excluir</button></td> -->
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>

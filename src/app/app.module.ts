@@ -5,13 +5,16 @@ import { BrowserModule } from '@angular/platform-browser';
 import ptBr from '@angular/common/locales/pt';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { SidebarComponent } from './sidebar/sidebar.component';
-import { TopbarComponent } from './topbar/topbar.component';
-import { TabelaComponent } from './tabela/tabela.component';
-import { HomeComponent } from './home/home.component';
-import { FormatarCpfPipe } from './pipes/formatar-cpf.pipe';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { TopbarComponent } from './components/topbar/topbar.component';
+import { TabelaComponent } from './paginas/tabela/tabela.component';
+import { HomeComponent } from './paginas/home/home.component';
 import { FormatarTelefonePipe } from './pipes/formatar-telefone.pipe';
-import { ContadorComponent } from './contador/contador.component';
+import { ContadorComponent } from './paginas/contador/contador.component';
+import { SistemaDeEstoqueComponent } from './paginas/sistema-de-estoque/sistema-de-estoque.component';
+import { FormsModule } from '@angular/forms';
+import { ListaEstoqueComponent } from './paginas/lista-estoque/lista-estoque.component';
+import { FormatarCpfPipe } from './pipes/formatar-cpf.pipe';
 
 registerLocaleData(ptBr);
 
@@ -24,11 +27,14 @@ registerLocaleData(ptBr);
     HomeComponent,
     FormatarCpfPipe,
     FormatarTelefonePipe,
-    ContadorComponent
+    ContadorComponent,
+    SistemaDeEstoqueComponent,
+    ListaEstoqueComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt' },
